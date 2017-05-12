@@ -1,0 +1,16 @@
+[
+  {
+    "namespace": "parentalControls",
+    "description": "Check if parental controls are enabled for the current user",
+    "permissions": ["experiments.parentalControls"],
+    "functions": [
+      {
+        "name": "getStatus",
+        "type": "function",
+        "description": "Returns a boolean indicating if parental controls are enabled for the current user",
+        "async": true,
+        "parameters": []
+      }
+    ]
+  }
+]
