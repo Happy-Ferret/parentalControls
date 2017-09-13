@@ -3,7 +3,7 @@ const {utils: Cu} = Components;
 Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 
 XPCOMUtils.defineLazyServiceGetter(this, "ParentalControls",
-  "@mozilla.org/parental-controls-service;1", "nsIParenatlControlsService");
+  "@mozilla.org/parental-controls-service;1", "nsIParentalControlsService");
 
 class API extends ExtensionAPI {
   getAPI(context) {
