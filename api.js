@@ -21,6 +21,7 @@ class API extends ExtensionAPI {
           }
 
           const permissionURI = buildPermissionURI(reason);
+          // This may be sync and blocking. Any way to get around that?
           return ParentalControls.requestURIOverride(permissionURI, context.contentWindow);
         }
       }
