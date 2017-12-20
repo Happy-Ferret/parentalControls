@@ -1,8 +1,20 @@
 [
   {
+   "namespace": "manifest",
+   "types": [
+     {
+       "$extend": "Permission",
+       "choices": [{
+         "type": "string",
+         "enum": [ "parentalControls" ]
+       }]
+     }
+   ]
+  },
+  {
     "namespace": "parentalControls",
     "description": "Check if parental controls are enabled for the current user",
-    "permissions": ["experiments.parentalControls"],
+    "permissions": ["parentalControls"],
     "functions": [
       {
         "name": "getStatus",
@@ -10,6 +22,18 @@
         "description": "Returns a boolean indicating if parental controls are enabled for the current user",
         "async": true,
         "parameters": []
+      },
+      {
+        "name": "requestPermission",
+        "type": "function",
+        "description": "Returns a boolean indicating if parental controls allow an action for the given reason. Defaults to true if parental controls are disabled.",
+        "async": true,
+        "parameters:": [
+          {
+            "name": "reason",
+            "type": "string"
+          }
+        ]
       }
     ]
   }
