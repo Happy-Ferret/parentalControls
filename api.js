@@ -6,7 +6,7 @@ Cu.import("resource://gre/modules/XPCOMUtils.jsm");
 XPCOMUtils.defineLazyServiceGetter(this, "ParentalControls",
   "@mozilla.org/parental-controls-service;1", "nsIParentalControlsService");
 
-class API extends ExtensionAPI {
+class parentalControls extends ExtensionAPI {
   getAPI(context) {
     const { extension } = context;
     const buildPermissionURI = (reason) => extension.getURL('/') + encodeURIComponent(reason);

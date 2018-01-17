@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Parental Controls Experiment",
+    "description": "parentalControls API to check if parental controls are enabled",
+    "experiment_apis": {
+        "parentalControls": {
+            "schema": "schema.json",
+            "parent": {
+                "scopes": [
+                    "addon_parent"
+                ],
+                "scripts": "api.js",
+                "paths": [
+                    ["experiments", "parentalControls"]
+                ]
+            }
+        }
+    }
+}
